@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+.App {
+  text-align: center;
+  
+}
+
+
+.App-header {
+  background-color: #3E506B;
+  height: 60px;
+  color: white;
+  text-align: left;
+  padding-top: 20px; 
+  padding-left: 5em;
+  min-width: 940px;
+  margin:0 auto;
+}
+header#bg {
+  background-color: #3E506B;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+
+
+.open-home__title {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 40px;
+  text-align: center;
+  color: #FFF;
+  text-shadow: 0px 1px 4px rgba(48, 50, 58, 0.6);
+  margin: 0;
+  padding-top:40px;
+}
+
+.open-home__subtitle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  text-align: center;
+  color: #FFF;
+  text-shadow: 0px 0px 1px rgba(48, 50, 58, 0.6), 0px 1px 1px rgba(48, 50, 58, 0.6);
+  margin: 0.3em 0;
+  font-size: 18px;
+}
+
+.container{
+  background-image: url(https://assets.trainline.eu/assets/images/open-home/covers/cover-beach-8dc53adfd913bec45958b705ec6369fa.jpg);
+
+}
+
+.wrapper{
+
+  display: grid;
+  grid-template-columns: 50% 50%;	
+  margin-top:40px;
+}
+
+.box-r{
+  background-color: orange;
+  height: 460px;
+  margin: 0 auto;
+  margin-right: 1em;
+  float: left;
+  display: block;
+  padding: 24px 40px;
+  background-color: #FFF;
+  border-radius: 0.3125em;
+  border: 1px solid #DCE3E6;
+  width: 48.82117%;
+}
+.box-l{
+  background-color: rgb(98, 226, 94);
+  height: 460px;
+  margin: 0 auto;
+  margin-left: 1em;
+  float: left;
+  display: block;
+  padding: 24px 40px;
+  background-color: #FFF;
+  border-radius: 0.3125em;
+  border: 1px solid #DCE3E6;
+  width: 48.82117%;
+}
+
+.search-title{
+  text-rendering: optimizeLegibility;
+    font-size: 20px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0 0 15px;
+}
+
+.open-home-carriers__title--container{
+  display: grid;
+  grid-template-columns: 2fr;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 30px 0 20px;
+  margin-top: 50px;
+  width: 200%;
+}
+
+.open-home-carriers__title{
+  margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #8C8A8C;
+}

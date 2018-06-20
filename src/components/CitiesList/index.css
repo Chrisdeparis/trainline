@@ -1,0 +1,42 @@
+ul{
+    list-style: none;
+}
+
+li a{
+    border-bottom: 1px solid #DCE3E6;
+    color: #323E42;
+    display: block;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+a{
+    opacity: 1;
+    background-color: #fcfcfd;
+    text-decoration: none;
+    
+}
+
+ul.search-list{
+    outline: none;
+    border-radius: 0.3125em;
+    border: 1px solid #DCE3E6;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.search__list-item li a {
+    border-bottom: 1px solid #DCE3E6;
+    color: #323E42;
+    display: block;
+    overflow: hidden;
+    height: 40px;
+    padding:10px;
+} 
+
+ul.search__list-item {
+    padding-left: 0;
+}
+
