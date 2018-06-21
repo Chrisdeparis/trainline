@@ -40,7 +40,7 @@ class Cities extends Component {
         return (
         
             <div className="bloc-search">
-                <Intro message="Quel est votre trajet ?" />
+                
                 <div className="search__field
                 search__departure
                 grouped-input--top
