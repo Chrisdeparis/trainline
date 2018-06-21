@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const CitiesListItem = ({ cities }) => (
     <li className="search__list-item search__stations--list-item station-item highlighted ember-view">
-        <Link className="search__list-link search__stations--list-link" to={`/city/${cities.city_id}`}>
+        <Link className="search__list-link search__stations--list-link" to={`#`}>
             {cities.unique_name}
         </Link>
         

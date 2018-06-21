@@ -24,7 +24,7 @@ class Cities extends Component {
         fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
             .then(response => response.json())
             .then(json => this.setState({ cities:json, isFetching: false }))
-            
+            console.log(e.target.value);
         
     }
 
