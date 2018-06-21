@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import CitiesList from '../../components/CitiesList'
 import Loader from '../../components/Loader'
-import Intro from '../../components/Intro'
 
 
 class Cities extends Component {
@@ -21,10 +20,10 @@ class Cities extends Component {
             .then(response => response.json())
             .then(json => this.setState({ cities:json, isFetching: false }))
         
-        fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
-            .then(response => response.json())
-            .then(json => this.setState({ cities:json, isFetching: false }))
-            console.log(e.target.value);
+        // fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
+        //     .then(response => response.json())
+        //     .then(json => this.setState({ cities:json, isFetching: false }))
+        //     // console.log(e.target.value);
         
     }
 
