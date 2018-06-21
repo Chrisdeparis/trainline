@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import CitiesList from '../../components/CitiesList'
+import PopularList from '../../components/PopularList'
 import Loader from '../../components/Loader'
 
 
-class Cities extends Component {
+class Start extends Component {
 
     state = {
         cities: [],
@@ -14,14 +14,14 @@ class Cities extends Component {
     onCitiesInputChange = e => {
         this.setState({ citiesName: e.target.value, isFetching: true })
         
-        fetch(`http://www-uat.tictactrip.eu/api/cities/autocomplete/?q=${e.target.value}`)
-            .then(response => response.json())
-            .then(json => this.setState({ cities:json, isFetching: false }))
-        
-        // fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
+        // fetch(`http://www-uat.tictactrip.eu/api/cities/autocomplete/?q=${e.target.value}`)
         //     .then(response => response.json())
         //     .then(json => this.setState({ cities:json, isFetching: false }))
-        //     // console.log(e.target.value);
+        
+        fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
+            .then(response => response.json())
+            .then(json => this.setState({ cities:json, isFetching: false }))
+            // console.log(e.target.value);
         
     }
 
@@ -60,11 +60,11 @@ class Cities extends Component {
                     isFetching && <Loader />
                 }
                 {
-                    !isFetching && <CitiesList list={this.state.cities} />                
+                    !isFetching && <PopularList list={this.state.cities} />                
                 }
             </div>
         )
     }
 }
 
-export default Cities;
+export default Start;
