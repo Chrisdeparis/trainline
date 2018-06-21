@@ -75,7 +75,9 @@ class App extends Component {
     Quel est votre trajet&nbsp;?
   </div>
 
-  <form>
+  <Main />
+
+  {/* <form>
     <div class="search__section search__section--od">
       <div class="search__field
                search__departure
@@ -161,7 +163,7 @@ class App extends Component {
 <div class="progress-button__bar">
   <div style={{'width':'0%'}}></div>
 </div>
-</div>  </form>
+</div>  </form> */}
 </div>
 
 <div class="split-panel--right-container">
