@@ -8,8 +8,11 @@ class Start extends Component {
     state = {
         cities: [],
         citiesName: '',
-        isFetching: false
+        isFetching: false,
+        
     }
+
+    
     
     onCitiesInputChange = e => {
         this.setState({ citiesName: e.target.value, isFetching: true })
@@ -40,6 +43,7 @@ class Start extends Component {
                 focus">
                     
                 </div>
+                
                 { 
                     !isFetching && cities.length === 0 && citiesName.trim() === ''
 

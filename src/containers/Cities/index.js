@@ -8,7 +8,18 @@ class Cities extends Component {
     state = {
         cities: [],
         citiesName: '',
-        isFetching: false
+        isFetching: false,
+        ShowAdvantages: true
+    }
+
+    operation(){
+        console.log('clic input');
+
+        this.setState({
+            ShowAdvantages: false,
+        
+        })
+        
     }
     
     onCitiesInputChange = e => {
@@ -24,12 +35,15 @@ class Cities extends Component {
         //     // console.log(e.target.value);
         
     }
-
+    
+    
    
 
     render(){
 
         const { cities, citiesName, isFetching } = this.state;
+
+        
 
         return (
         
@@ -45,9 +59,11 @@ class Cities extends Component {
                         value={citiesName} 
                         type="text"
                         className="search__departure-input ember-text-field textfield station-text-field search__field--valid station-text-field-- search__input focus ember-view"
-                        
+                        onClick={()=>this.operation()}
                         onChange={this.onCitiesInputChange} />
-                </div>
+                </div>                
+                  
+                
                 { 
                     !isFetching && cities.length === 0 && citiesName.trim() === ''
 
