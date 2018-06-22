@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from '../Main'
 import Start from '../../containers/Start'
-
+import Advantages from '../Advantages'
 
 
 class App extends Component {
@@ -168,6 +168,9 @@ class App extends Component {
 </div>
 
 <div className="split-panel--right-container">
+{/*Les petits plus de train line a integrer avant le clic*/}
+  <Advantages />
+
     <div className="search__form--right split-panel--right departure ">
       <div style={{'top': '73px'}} className="split-panel__arrow"></div>
 
@@ -175,40 +178,6 @@ class App extends Component {
           <div id="ember1051" className="ember-view">  <h1 className="search__title">Choisissez une gare de départ</h1>
       
       <Start />
-    {/* <ul data-help-contexts="zone_origin_destination_selection" className="search__list
-               search__stations--list
-               " data-ember-action="" data-ember-action-1110="1110">
-
-        <li id="ember1118" className="search__list-item search__stations--list-item station-item highlighted ember-view"><a className="search__list-link search__stations--list-link">
-  Paris
-</a>
-</li>
-        <li id="ember1119" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  London (Londres)
-</a>
-</li>
-        <li id="ember1120" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  Lyon
-</a>
-</li>
-        <li id="ember1121" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  Lille
-</a>
-</li>
-        <li id="ember1122" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  Bordeaux
-</a>
-</li>
-        <li id="ember1123" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  Strasbourg
-</a>
-</li>
-        <li id="ember1124" className="search__list-item search__stations--list-item station-item ember-view"><a className="search__list-link search__stations--list-link">
-  Marseille St-Charles
-</a>
-</li>
-    </ul> */}
-
 
 
     <button className="button--light search__list-button search__list-button--via search__via-icon">
@@ -218,11 +187,11 @@ class App extends Component {
 
 
       </div>
-    </div>
+</div>
 </div>
 </div>
 
-  </div>
+</div>
 </div>    </div>
   </div>
 

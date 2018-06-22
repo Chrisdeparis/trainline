@@ -25,6 +25,8 @@ class Cities extends Component {
         
     }
 
+   
+
     render(){
 
         const { cities, citiesName, isFetching } = this.state;
