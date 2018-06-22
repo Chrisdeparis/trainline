@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from '../Main'
-import PopularList from '../PopularList';
+import Start from '../../containers/Start'
 
 
 
@@ -173,8 +173,8 @@ class App extends Component {
 
       <div className="ct-panel">
           <div id="ember1051" className="ember-view">  <h1 className="search__title">Choisissez une gare de départ</h1>
-    
-      <PopularList/>
+      
+      <Start />
     {/* <ul data-help-contexts="zone_origin_destination_selection" className="search__list
                search__stations--list
                " data-ember-action="" data-ember-action-1110="1110">
