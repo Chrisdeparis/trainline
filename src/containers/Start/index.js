@@ -14,15 +14,14 @@ class Start extends Component {
     onCitiesInputChange = e => {
         this.setState({ citiesName: e.target.value, isFetching: true })
         
-        // fetch(`http://www-uat.tictactrip.eu/api/cities/autocomplete/?q=${e.target.value}`)
-        //     .then(response => response.json())
-        //     .then(json => this.setState({ cities:json, isFetching: false }))
+            // console.log(e.target.value);
         
+    }
+
+    componentDidMount(){
         fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
             .then(response => response.json())
             .then(json => this.setState({ cities:json, isFetching: false }))
-            // console.log(e.target.value);
-        
     }
 
     render(){
@@ -39,12 +38,7 @@ class Start extends Component {
                 required
                 
                 focus">
-                    <input 
-                        value={citiesName} 
-                        type="text"
-                        className="search__departure-input ember-text-field textfield station-text-field search__field--valid station-text-field-- search__input focus ember-view"
-                        
-                        onChange={this.onCitiesInputChange} />
+                    
                 </div>
                 { 
                     !isFetching && cities.length === 0 && citiesName.trim() === ''
