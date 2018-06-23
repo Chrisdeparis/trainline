@@ -78,24 +78,6 @@ class Search extends Component {
                              onClick={()=>this.handleClick()}
                              onChange={this.onCitiesInputChange} />
                      </div>                
-                       
-                     
-                     { 
-                         !isFetching && cities.length === 0 && citiesName.trim() === ''
-     
-                         
-                     }
-                     {
-                         !isFetching && cities.length === 0 && citiesName.trim() !== ''
-                         &&
-                         <p>Aucune gare trouvée</p>
-                     }
-                     {
-                         isFetching && <Loader />
-                     }
-                     {
-                         !isFetching && <CitiesList list={this.state.cities} />                
-                     }
                  </div>
                   </div>
                   <div className="search__field
@@ -178,7 +160,26 @@ class Search extends Component {
         <ul data-help-contexts="zone_origin_destination_selection" className="search__list
           search__stations--list
           has-selection" data-ember-action="" data-ember-action-1245="1245">
-          <Start /> 
+          <ToggleDisplay show={!this.state.show}>
+          
+            <Start />
+            { 
+              !isFetching && cities.length === 0 && citiesName.trim() === ''
+
+              
+          }
+          {
+              !isFetching && cities.length === 0 && citiesName.trim() !== ''
+              &&
+              <p>Aucune gare trouvée</p>
+          }
+          {
+              isFetching && <Loader />
+          }
+          {
+              !isFetching && <CitiesList list={this.state.cities} />                
+          } 
+          </ToggleDisplay>
         </ul>
         
         
