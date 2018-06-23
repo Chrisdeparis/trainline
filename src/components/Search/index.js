@@ -74,6 +74,7 @@ class Search extends Component {
                          <input 
                              value={citiesName} 
                              type="text"
+                             placeholder="Saisissez votre gare de départ..."
                              className="search__departure-input ember-text-field textfield station-text-field search__field--valid station-text-field-- search__input focus ember-view"
                              onClick={()=>this.handleClick()}
                              onChange={this.onCitiesInputChange} />
@@ -160,7 +161,7 @@ class Search extends Component {
         <ul data-help-contexts="zone_origin_destination_selection" className="search__list
           search__stations--list
           has-selection" data-ember-action="" data-ember-action-1245="1245">
-          <ToggleDisplay show={!this.state.show}>
+          <ToggleDisplay if={!this.state.show}>
           
             <Start />
             { 
