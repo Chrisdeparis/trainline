@@ -69,6 +69,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
+              
               <Search />
               <div id="ember717" className="ember-view">
                 <div id="ember726" className="mobile-incentive generic ember-view">

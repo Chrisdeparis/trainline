@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CitiesList from '../../components/CitiesList'
 import Loader from '../../components/Loader'
+import Advantages from '../../components/Advantages'
 
 
 class Cities extends Component {
@@ -9,14 +10,15 @@ class Cities extends Component {
         cities: [],
         citiesName: '',
         isFetching: false,
-        ShowAdvantages: true
+        show: true
     }
 
-    operation(){
+
+    handleClick(){
         console.log('clic input');
 
         this.setState({
-            ShowAdvantages: false,
+            show: false,
         
         })
         
@@ -59,7 +61,7 @@ class Cities extends Component {
                         value={citiesName} 
                         type="text"
                         className="search__departure-input ember-text-field textfield station-text-field search__field--valid station-text-field-- search__input focus ember-view"
-                        onClick={()=>this.operation()}
+                        onClick={()=>this.handleClick()}
                         onChange={this.onCitiesInputChange} />
                 </div>                
                   

@@ -118,3 +118,6 @@ header#bg {
     color: #8C8A8C;
 }
 
+.search__form--right.split-panel--right.departure {
+  width: 100%;
+}
