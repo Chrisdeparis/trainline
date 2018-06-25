@@ -34,7 +34,6 @@ class Search extends Component {
 
 
   render(){
-  
 
   const { cities, citiesName, isFetching } = this.state;
   const items = [
@@ -93,7 +92,7 @@ class Search extends Component {
                      ">
                      <Downshift
                         onChange={selection => alert(`You selected ${selection.value}`)}
-                        itemToString={item => (item ? this.onCitiesInputChange.value : '')}
+                        itemToString={item => (item ? item.value : '')}
                       >
                         {({
                           getInputProps,
@@ -133,7 +132,7 @@ class Search extends Component {
                           </div>
                         )}
                       </Downshift>
-                    {/*<input tabIndex="1" type="text" autoComplete="off" spellCheck="false" required="" placeholder="Saisissez votre gare d’arrivée…" id="ember703" className="search__arrival-input ember-text-field textfield station-text-field empty station-text-field-- search__input empty ember-view"/>*/}
+                     {/*<input tabIndex="1" type="text" autoComplete="off" spellCheck="false" required="" placeholder="Saisissez votre gare d’arrivée…" id="ember703" className="search__arrival-input ember-text-field textfield station-text-field empty station-text-field-- search__input empty ember-view"/>*/}
                   </div>
                   <button id="ember706" style={{'display': 'none'}} className="search__swap swap-button swap-button--in-between ember-view">
                   <div className="swap-button__equilibrium">
