@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import CitiesList from '../../components/CitiesList'
 
-import Advantages from '../../components/Advantages'
 
 
 class Cities extends Component {

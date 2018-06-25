@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Main from '../Main'
-import Start from '../../containers/Start'
-import Advantages from '../Advantages'
 import Search from '../Search'
 
 class App extends Component {

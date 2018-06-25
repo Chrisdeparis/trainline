@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Main from '../Main'
+import {render} from 'react-dom'
+import Downshift from 'downshift'
 import Advantages from '../Advantages'
 import Start from '../../containers/Start'
 import ToggleDisplay from 'react-toggle-display'
@@ -29,17 +30,20 @@ class Search extends Component {
         .then(response => response.json())
         .then(json => this.setState({ cities:json, isFetching: false }))
     
-    // fetch(`http://www-uat.tictactrip.eu/api/cities/popular/5`)
-    //     .then(response => response.json())
-    //     .then(json => this.setState({ cities:json, isFetching: false }))
-    //     // console.log(e.target.value);
-    
 }
 
 
   render(){
+  
 
   const { cities, citiesName, isFetching } = this.state;
+  const items = [
+    {value: 'apple'},
+    {value: 'pear'},
+    {value: 'orange'},
+    {value: 'grape'},
+    {value: 'banana'},
+  ]
   
   return (
     <div className="application__body-container">
@@ -87,7 +91,49 @@ class Search extends Component {
                      required
                      awaiting-input
                      ">
-                     <input tabIndex="1" type="text" autoComplete="off" spellCheck="false" required="" placeholder="Saisissez votre gare d’arrivée…" id="ember703" className="search__arrival-input ember-text-field textfield station-text-field empty station-text-field-- search__input empty ember-view"/>
+                     <Downshift
+                        onChange={selection => alert(`You selected ${selection.value}`)}
+                        itemToString={item => (item ? this.onCitiesInputChange.value : '')}
+                      >
+                        {({
+                          getInputProps,
+                          getItemProps,
+                          getLabelProps,
+                          getMenuProps,
+                          isOpen,
+                          inputValue,
+                          highlightedIndex,
+                          selectedItem,
+                        }) => (
+                          <div>
+                            
+                            <input className="search__arrival-input ember-text-field textfield station-text-field empty station-text-field-- search__input empty ember-view" placeholder="Saisissez votre gare d'arrivée..." {...getInputProps()} />
+                            <ul {...getMenuProps()}>
+                              {isOpen
+                                ? items
+                                    .filter(item => !inputValue || item.value.includes(inputValue))
+                                    .map((item, index) => (
+                                      <li
+                                        {...getItemProps({
+                                          key: item.value,
+                                          index,
+                                          item,
+                                          style: {
+                                            backgroundColor:
+                                              highlightedIndex === index ? 'lightgray' : 'white',
+                                            fontWeight: selectedItem === item ? 'bold' : 'normal',
+                                          },
+                                        })}
+                                      >
+                                        {item.value}
+                                      </li>
+                                    ))
+                                : null}
+                            </ul>
+                          </div>
+                        )}
+                      </Downshift>
+                    {/*<input tabIndex="1" type="text" autoComplete="off" spellCheck="false" required="" placeholder="Saisissez votre gare d’arrivée…" id="ember703" className="search__arrival-input ember-text-field textfield station-text-field empty station-text-field-- search__input empty ember-view"/>*/}
                   </div>
                   <button id="ember706" style={{'display': 'none'}} className="search__swap swap-button swap-button--in-between ember-view">
                   <div className="swap-button__equilibrium">
